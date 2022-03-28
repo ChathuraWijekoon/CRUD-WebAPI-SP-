@@ -1,0 +1,22 @@
+﻿@model CRUD_WebAPI__SP_.Models.UserInfo
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>@Model.UserName</h2>
+<form action="/Home/index" method="post">
+    <input type="text" name="UserName"/>
+    <input type="submit" value="Submit Name"/>
+</form>
+
+<form action="/Home/UpdateUserInfo" method="post">
+    <input type="text" name="UserName"/>
+    <input type="text" name="New UserName"/>
+    <input type="submit" value="Submit Name"/>
+</form>
+
+<form action="/Home/DeleteUserInfo" method="post">
+    <input type="text" name="UserName" />
+    <input type="submit" value="Delete Name"/>
+</form>
